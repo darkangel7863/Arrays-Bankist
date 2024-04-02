@@ -80,6 +80,15 @@ const displayMovements = function (movements) {
 };
 displayMovements(account1.movements);
 
+// to calculate balance
+
+const calcDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, curr) => acc + curr, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+
+calcDisplayBalance(account1.movements);
+
 // to create usernames
 
 const createUsernames = function (accs) {
@@ -93,4 +102,3 @@ const createUsernames = function (accs) {
 };
 
 createUsernames(accounts);
-console.log(accounts);
